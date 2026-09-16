@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Изучаем CSS</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <h1 id="site-title">Изучаем CSS</h1>
+        <p class="subtitle">
+            Практика с селекторами, каскадом и наследованием
+        </p>
+    </header>
+
+
+    <main class="content">
+
+        <article class="post featured-post">
+            <h2>Основы CSS</h2>
+
+            <p class="intro">
+                CSS — это язык стилей, который используется
+                для оформления веб-страниц.
+            </p>
+
+            <p>
+                Он позволяет изменять внешний вид элементов,
+                их расположение, размеры и другие свойства.
+            </p>
+        </article>
+
+
+        <section class="examples">
+
+            <h2>Примеры селекторов</h2>
+
+            <div class="card">
+
+                <h3>Селекторы</h3>
+
+                <ul>
+                    <li class="important">По тегу</li>
+                    <li>По классу</li>
+                    <li class="important">По ID</li>
+                    <li>Комбинированные селекторы</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <section class="cascade-demo">
+
+            <h2>Демонстрация каскада</h2>
+
+            <p class="cascade-text">
+                Этот текст используется для демонстрации
+                каскада и специфичности CSS.
+            </p>
+
+            <p id="special-text" class="cascade-text">
+                Для этого текста применяются несколько правил.
+            </p>
+
+        </section>
+
+
+        <section class="inheritance-demo">
+
+            <h2>Наследование свойств</h2>
+
+            <div class="inheritance-box">
+                <p>
+                    Этот текст наследует свойства от родительского элемента.
+                </p>
+
+                <div class="nested-text">
+                    Вложенный элемент также демонстрирует наследование.
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="pseudo-demo">
+
+            <h2>Псевдоклассы и псевдоэлементы</h2>
+
+            <ul class="pseudo-list">
+                <li>Первый элемент списка</li>
+                <li>Второй элемент списка</li>
+                <li>Третий элемент списка</li>
+            </ul>
+
+            <p class="decorated-text">
+                Этот текст оформлен с помощью псевдоэлементов.
+            </p>
+
+        </section>
+
+
+        <section class="current-color-demo">
+
+            <h2>Наследование currentColor</h2>
+
+            <div class="color-box">
+                <p>
+                    Цвет границы этого блока использует значение currentColor.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="subscribe">
+
+            <h2>Эксперимент с CSS</h2>
+
+            <p>
+                Наведи курсор на кнопку и элементы списка,
+                чтобы увидеть работу псевдоклассов.
+            </p>
+
+            <button type="button">
+                Проверить стили
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer class="main-footer">
+
+        <p>
+            &copy; 2026 CSS Практика
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

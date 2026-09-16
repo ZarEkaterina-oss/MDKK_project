@@ -1,0 +1,314 @@
+/*БАЗОВЫЕ СТИЛИ*/
+
+   body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #30303a;
+    background-color: #f4f4f8;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #4d4d68;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+
+/* CЕЛЕКТОР ПО КЛАССУ*/
+
+.main-header {
+    padding: 30px;
+    text-align: center;
+    background-color: #e5e0f2;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #69677a;
+}
+
+
+/*СЕЛЕКТОР ПО ID*/
+
+#site-title {
+    margin-bottom: 10px;
+    color: #51486d;
+}
+
+
+/*ОСНОВНОЙ КОНТЕНТ*/
+
+.content {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+
+/* СЕЛЕКТОР ПО ТЕГУ*/
+
+li {
+    padding: 8px;
+}
+
+
+/*СЕЛЕКТОР ПО КЛАССУ*/
+
+.important {
+    font-weight: bold;
+    color: #725b86;
+}
+
+
+/*КОМБИНИРОВАННЫЕ СЕЛЕКТОРЫ*/
+
+/* Дочерний селектор */
+
+.content > .featured-post {
+    padding: 25px;
+    margin-bottom: 25px;
+    background-color: white;
+    border-left: 5px solid #8b78a8;
+}
+
+
+/* Селектор потомков */
+
+.content .post p {
+    color: #454554;
+}
+
+
+/* Селектор соседних элементов */
+
+.post + .examples {
+    margin-top: 20px;
+}
+
+
+/* Селектор атрибута */
+
+button[type="button"] {
+    padding: 10px 20px;
+}
+
+
+/*КАРТОЧКА*/
+
+.card {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #d2d0dc;
+    border-radius: 8px;
+}
+
+.card ul {
+    margin-top: 10px;
+}
+
+
+/*КАСКАД*/
+
+/* Более общее правило */
+
+.cascade-text {
+    color: #555555;
+}
+
+
+/* Более специфичный селектор */
+
+.cascade-demo .cascade-text {
+    color: #55506a;
+}
+
+
+/* Ещё более специфичный селектор */
+
+#special-text {
+    color: #8a5574;
+}
+
+
+/*ДЕМОНСТРАЦИЯ !IMPORTANT*/
+
+.cascade-demo .important-demo {
+    color: black;
+}
+
+.cascade-demo .important-demo {
+    color: #7b5270 !important;
+}
+
+
+/*НАСЛЕДОВАНИЕ*/
+
+.inheritance-demo {
+    font-family: Georgia, serif;
+    color: #4b4355;
+}
+
+.inheritance-box {
+    color: #665174;
+    font-size: 18px;
+    padding: 20px;
+    border: 2px solid currentColor;
+}
+
+.nested-text {
+    margin-top: 15px;
+}
+
+
+/* Явное наследование свойства */
+
+.inheritance-box .nested-text {
+    color: inherit;
+}
+
+
+/*ПСЕВДОКЛАСС :HOVER*/
+
+.pseudo-list li:hover {
+    background-color: #e8e1f0;
+    cursor: pointer;
+}
+
+
+/*ПСЕВДОКЛАСС :NTH-CHILD*/
+
+.pseudo-list li:nth-child(2) {
+    font-weight: bold;
+    color: #76577f;
+}
+
+
+/*ПСЕВДОКЛАСС :FIRST-CHILD*/
+
+.pseudo-list li:first-child {
+    text-decoration: underline;
+}
+
+
+/*ПСЕВДОЭЛЕМЕНТ ::BEFORE*/
+
+.decorated-text::before {
+    content: "★ ";
+    color: #806a9a;
+}
+
+
+/*ПСЕВДОЭЛЕМЕНТ ::AFTER*/
+
+.decorated-text::after {
+    content: " ★";
+    color: #806a9a;
+}
+
+
+/*URRENTCOLOR*/
+
+.color-box {
+    color: #765f83;
+    border: 2px solid currentColor;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.color-box p {
+    color: currentColor;
+}
+
+
+/*КНОПКА*/
+
+.subscribe {
+    margin-top: 25px;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #d2d0dc;
+}
+
+button {
+    background-color: #79658c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5e4c70;
+}
+
+
+/*АНИМАЦИЯ @KEYFRAMES*/
+
+.main-header {
+    animation: headerAppearance 1s ease;
+}
+
+@keyframes headerAppearance {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*CSS-ПЕРЕМЕННЫЕ*/
+
+:root {
+    --main-color: #765f83;
+    --secondary-color: #e8e1f0;
+    --text-color: #30303a;
+    --spacing: 20px;
+}
+
+.main-footer {
+    padding: var(--spacing);
+    text-align: center;
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+}
+
+
+/*АДАПТИВНОСТЬ*/
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .content {
+        width: 94%;
+        margin-top: 20px;
+    }
+
+    .main-header {
+        padding: 20px;
+    }
+
+    .card,
+    .inheritance-box,
+    .subscribe {
+        padding: 15px;
+    }
+}
